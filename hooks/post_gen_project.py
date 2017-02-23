@@ -53,6 +53,7 @@ msg = dedent(
     Prepare to deploy to Amazon Elastic Beanstalk
         %(pip_cmd)s install awsebcli
         %(pip_cmd)s freeze > requirements.txt
+        
 
     """ % vars)
 print(msg)
