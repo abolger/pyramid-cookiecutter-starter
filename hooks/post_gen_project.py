@@ -47,7 +47,12 @@ msg = dedent(
     Run your project's tests.
         %(pytest_cmd)s
 
-    Run your project.
+    Run your project locally.
         %(pserve_cmd)s development.ini
+
+    Prepare to deploy to Amazon Elastic Beanstalk
+        %(pip_cmd)s install awsebcli
+        %(pip_cmd)s freeze > requirements.txt
+
     """ % vars)
 print(msg)

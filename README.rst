@@ -1,17 +1,13 @@
 ============================
-pyramid-cookiecutter-starter
+pyramid-cookiecutter-starter-AWS
 ============================
 
-.. image:: https://travis-ci.org/Pylons/pyramid-cookiecutter-starter.png?branch=master
-        :target: https://travis-ci.org/Pylons/pyramid-cookiecutter-starter
-        :alt: Master Travis CI Status
-
-A Cookiecutter (project template) for creating a Pyramid starter project using URL dispatch for routing and Jinja2 for templating.
+A Cookiecutter (project template) for creating a Pyramid starter project that can be deployed to Amazon Web Services Elastic Beanstalk (http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) . Project uses URL dispatch for routing and Jinja2 for templating. 
 
 Requirements
 ------------
-
-* Python 2.7 or 3.4+
+* Amazon Web Services free-tier account. 
+* Python 2.7 or 3.4 (Amazon webservices supports these 2 python versions.)
 * `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/installation.html>`_
 
 Usage
@@ -21,7 +17,7 @@ Usage
 
 .. code-block:: bash
 
-    $ cookiecutter https://github.com/Pylons/pyramid-cookiecutter-starter
+    $ cookiecutter https://github.com/abolger/pyramid-cookiecutter-starter-AWS
 
 2. Finish configuring the project by creating a virtual environment and installing your new project. These steps are output as part of the cookiecutter command above and are slightly different for Windows.
 
@@ -42,8 +38,20 @@ Usage
 
     $ env/bin/pytest
 
-4. Run your project.
+4. Run your project locally.
 
 .. code-block:: bash
 
     $ env/bin/pserve development.ini
+
+5. Install Elastic Beanstalk CLI (http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-getting-set-up.html).  
+
+.. code-block:: bash  
+
+    $ env/bin/pip install awsebcli
+
+
+6. Deploy it to Amazon Elastic Beanstalk using the AWS eb Command line interface:
+
+.. code-block:: bash
+    $ 
